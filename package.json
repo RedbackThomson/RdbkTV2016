@@ -19,7 +19,6 @@
     "thomson"
   ],
   "author": "RedbackThomson (https://rdbk.tv)",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/RedbackThomson/RdbkTV2016/issues"
   },
@@ -46,6 +45,7 @@
   },
   "dependencies": {
     "react": "^0.14.6",
+    "react-addons-css-transition-group": "^0.14.6",
     "react-dom": "^0.14.6"
   }
 }

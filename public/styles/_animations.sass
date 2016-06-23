@@ -1,0 +1,17 @@
+.description-shift-appear, .description-shift-enter
+  transform: rotateX(-90deg) translateY(1em);
+  opacity: 0.01;
+
+  &-active
+    transform: none;
+    opacity: 1;
+    transition: transform .5s linear, opacity .5s ease-in;
+
+.description-shift-leave
+  opacity: 1;
+  transform: none;
+
+  &-active
+    transform: rotateX(90deg) translateY(-1em);
+    opacity: 0.01;
+    transition: transform .5s linear, opacity .5s ease-out;

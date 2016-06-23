@@ -1,0 +1,8 @@
+npm-debug.log
+.DS_Store
+
+dist/
+node_modules/
+public/bower_components/
+rdbktv2016.sublime-project
+rdbktv2016.sublime-workspace

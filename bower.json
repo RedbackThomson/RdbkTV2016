@@ -1,0 +1,30 @@
+{
+  "name": "rdbktv2016",
+  "description": "The portfolio website of RedbackThomson for 2016",
+  "main": "",
+  "authors": [
+    "RedbackThomson (https://rdbk.tv)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "redback",
+    "redbackthomson",
+    "portfolio",
+    "website",
+    "2016",
+    "thomson"
+  ],
+  "homepage": "https://github.com/RedbackThomson/RdbkTV2016",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.1.1",
+    "foundation-sites": "^6.2.3"
+  }
+}

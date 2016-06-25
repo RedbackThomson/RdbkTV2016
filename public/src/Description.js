@@ -14,11 +14,12 @@ export default class Description extends Component {
       'Programmer',
       'Student',
       'Tinkerer',
-      'Enthusiast'
+      'Tech Enthusiast'
     ];
   }
 
   componentDidMount() {
+    this.changeDescription();
     this.startDescriptionTimer();
   }
 

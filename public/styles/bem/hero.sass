@@ -1,16 +1,24 @@
 .hero
-  margin: 120px 0;
+  margin: 120px 0
   &__name
-    font-size: 4em;
-    line-height: 0;
+    font-size: 3em
+    line-height: 0
+    margin-bottom: 25px
+
+    @media #{$medium-up}
+      font-size: 4em
+
     &--redback
-      color: $primary;
+      color: $primary
 
     &--thomson
-      color: $dark-highlight;
+      color: $dark-highlight
 
   &__description
-    position: absolute;
-    display: inline-block;
-    font-weight: 400;
-    font-size: 3em;
+    position: absolute
+    display: inline-block
+    font-weight: 400
+    font-size: 2em
+
+    @media #{$medium-up}
+      font-size: 3em

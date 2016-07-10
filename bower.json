@@ -24,6 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "^4.1.1"
+    "foundation-sites": "^6.2.3"
   }
 }

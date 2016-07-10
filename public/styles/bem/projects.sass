@@ -1,0 +1,31 @@
+.projects
+  border-radius: $border-radius
+  border: 1px solid $light-highlight
+  padding: 0
+
+  &__project
+    background-color: $white
+    padding: 5px 5px
+
+    &:hover, &:active, &:focus
+      background-color: lighten($light-highlight, 5)
+
+    &:not(:last-child)
+      border-bottom: 1px solid $light-highlight
+
+    &--media
+      margin-bottom: 0
+
+    &--image
+      float: left
+
+    &--text
+      display: inline
+
+    &--name
+      display: inline
+      width: 100%
+
+    &--subline
+      display: inline
+      color: lighten($font-color, 25)

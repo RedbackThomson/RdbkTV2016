@@ -1,10 +1,24 @@
-@import '_globals.sass';
-@import '_animations.sass';
+@import '../bower_components/foundation-sites/scss/foundation.scss'
+@include foundation-everything(true)
 
-@import 'bem/container.sass'
-@import 'bem/hero.sass';
+@import '_globals.sass'
+@import '_animations.sass'
+
+@import 'bem/hero.sass'
+@import 'bem/projects.sass'
+@import 'bem/viewer.sass'
+
+*
+  -webkit-focus-ring-color: $primary
 
 body
-  font-size: 12pt;
-  font-family: 'Oxygen', sans-serif;
-  background-color: $background;
+  font-size: 1em
+  font-family: 'Oxygen', sans-serif
+  background-color: $background
+  color: $font-color
+
+a
+  color: inherit
+
+  &:hover, &:focus, &:active
+    color: lighten($primary, 10)

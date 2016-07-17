@@ -1,11 +1,14 @@
 .hero
-  margin: 120px 0
+  padding: 3rem 0
+
   &__name
-    font-size: 3em
+    margin-top: 0.75rem
+    font-size: 2em
     line-height: 0
     margin-bottom: 25px
 
     @media #{$medium-up}
+      margin-top: 3.3rem
       font-size: 4em
 
     &--redback
@@ -18,7 +21,15 @@
     position: absolute
     display: inline-block
     font-weight: 400
-    font-size: 2em
+    font-size: 1.5em
 
     @media #{$medium-up}
       font-size: 3em
+
+  &__logo
+    *
+      fill-opacity: 0
+      transition: fill-opacity 1s
+
+    &--finished *
+      fill-opacity: 1

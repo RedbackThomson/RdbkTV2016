@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 
 export default class ProjectSelector extends Component {
-  getItem(name) {
+  changeProject(index) {
+    this.props.onProjectChange(index);
+  }
+
+  getItem(project, index) {
     return (
-      <li className="projects__project">
-        <a href="#">
+      <li className="projects__project" key={index}>
+        <a onClick={() => this.changeProject(index)}>
           <div className="media-object projects__project--media">
             <div className="media-object-section">
-              <img className="projects_project--image" src="http://placehold.it/90x90" height="90" width="90" /> 
+              <img className="projects_project--image thumbnail" src={project.thumbnail} height="90" width="90" /> 
             </div>
             <div className="media-object-section">
-              <h4 className="projects__project--name">{name}</h4><br/>
-              <div className="projects__project--subline"> Over 100,000 daily viewers </div>
+              <h4 className="projects__project--name">{project.name}</h4><br/>
+              <div className="projects__project--subline"> {project.subtitle} </div>
             </div>
           </div>
         </a>
@@ -20,16 +24,12 @@ export default class ProjectSelector extends Component {
   }
 
   render() {
+    var self = this;
     return (
       <ul className="menu vertical projects">
-        {this.getItem("LoLAlerter")}
-        {this.getItem("osu!Celebrity")}
-        {this.getItem("Anooj")}
-        {this.getItem("is")}
-        {this.getItem("a")}
-        {this.getItem("pussy")}
-        {this.getItem("ass")}
-        {this.getItem("bitch")}
+        {this.props.projects.map(function(project, i) {
+          return self.getItem(project, i);
+        })}
       </ul>
     );
   }

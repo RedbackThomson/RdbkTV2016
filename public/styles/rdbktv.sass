@@ -4,6 +4,7 @@
 @import '_globals.sass'
 @import '_animations.sass'
 
+@import 'bem/footer.sass'
 @import 'bem/hero.sass'
 @import 'bem/projects.sass'
 @import 'bem/viewer.sass'
@@ -22,3 +23,11 @@ a
 
   &:hover, &:focus, &:active
     color: lighten($primary, 10)
+
+img
+  border-radius: $border-radius
+
+.thumbnail
+  border-radius: $border-radius
+  &:hover, &:focus
+    box-shadow: 0 0 6px 1px rgba(110, 60, 175, 0.5)

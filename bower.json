@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-sites": "^6.2.3"
+    "foundation-sites": "^6.2.3",
+    "vivus": "^0.3.1"
   }
 }

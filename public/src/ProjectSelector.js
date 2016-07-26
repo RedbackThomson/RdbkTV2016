@@ -65,9 +65,6 @@ export default class ProjectSelector extends Component {
       this.push({value: i, label: project.name, image: project.thumbnail});
     }, mobileOptions);
 
-    var selectStyle = {
-      borderRadius: 3
-    };
     return (
       <div>
         <MediaQuery minDeviceWidth={1024}>
@@ -79,7 +76,6 @@ export default class ProjectSelector extends Component {
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1024}>
           <Select 
-            style={selectStyle} 
             className="projects__mobile-project"
             options={mobileOptions}
             onChange={(val) => this.changeProject(val.value)} 

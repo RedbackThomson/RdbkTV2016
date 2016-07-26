@@ -6,12 +6,14 @@ import Footer from './Footer.js'
 import ProjectSelector from './ProjectSelector.js'
 import ProjectViewer from './ProjectViewer.js'
 
+var projects = require('json!./Projects.json');
+
 export default class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      'projects': this.getProjects(),
+      'projects': projects,
       'current': 0,
     };
     this.changeCurrent = this.changeCurrent.bind(this);
@@ -34,35 +36,6 @@ export default class App extends Component {
   changeCurrent(newIndex) {
     if(newIndex < this.state.projects.length)
       this.setState({'current': newIndex});
-  }
-
-  getProjects() {
-    return [
-      {
-        'name': 'LoLAlerter',
-        'subtitle': 'Over 100,000 daily viewers',
-        'thumbnail': 'http://placehold.it/90x90',
-        'feature': 'http://placehold.it/1000x500'
-      },
-      {
-        'name': 'osu!Celebrity',
-        'subtitle': '500+ daily users',
-        'thumbnail': 'http://placehold.it/90x90',
-        'feature': 'http://placehold.it/1000x500'
-      },
-      {
-        'name': 'osu!Track',
-        'subtitle': 'Tracked over 200,000 users',
-        'thumbnail': 'http://placehold.it/90x90',
-        'feature': 'http://placehold.it/1000x500'
-      },
-      {
-        'name': 'Mylixia',
-        'subtitle': 'The home page for a famous person',
-        'thumbnail': 'http://placehold.it/90x90',
-        'feature': 'http://placehold.it/1000x500'
-      }
-    ];
   }
 
   render() {

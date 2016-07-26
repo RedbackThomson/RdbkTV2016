@@ -25,6 +25,9 @@ module.exports = {
       test: /\.sass$/,
       loaders: ["style", "css", "sass"]
     }, {
+      test: /\.css$/,
+      loaders: ["style", "css"]
+    }, {
       test: /\.coffee$/, 
       loader: "coffee-loader"
     }]

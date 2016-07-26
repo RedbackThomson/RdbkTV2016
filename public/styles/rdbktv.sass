@@ -1,6 +1,8 @@
 @import '../bower_components/foundation-sites/scss/foundation.scss'
 @include foundation-everything(true)
 
+@import 'react-select/default.scss'
+
 @import '_globals.sass'
 @import '_animations.sass'
 
@@ -9,8 +11,8 @@
 @import 'bem/projects.sass'
 @import 'bem/viewer.sass'
 
-*
-  -webkit-focus-ring-color: $primary
+:focus
+  outline-color:  $primary
 
 body
   font-size: 1em
@@ -31,3 +33,4 @@ img
   border-radius: $border-radius
   &:hover, &:focus
     box-shadow: 0 0 6px 1px rgba(110, 60, 175, 0.5)
+

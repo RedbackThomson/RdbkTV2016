@@ -7,21 +7,6 @@ export default class ProjectSelector extends Component {
     super(props);
 
     this.state = {
-      //Taken from
-      //https://raw.githubusercontent.com/d3/d3-scale/master/img/category20.png
-      languageColourOptions: [
-        '#466DB1',
-        '#E18700',
-        '#579920',
-        '#B84217',
-        '#8860BB',
-        '#7F5448',
-        '#CB7AC0',
-        '#7D7D7D',
-        '#B8BD0E',
-        '#65B6CC',
-      ],
-      languageColours: {},
       lastIndex: 0
     };
   }
@@ -43,13 +28,7 @@ export default class ProjectSelector extends Component {
               <h4 className="projects__project--name">{project.name}</h4><br/>
               <div className="projects__project--subline"> {project.subtitle} </div>
               {project.languages.map(function(language, i) {
-                if(!this.state.languageColours[language])
-                  this.state.languageColours[language] = 
-                    this.state.languageColourOptions[Object.keys(this.state.languageColours).length];
-                var style = {
-                  backgroundColor: this.state.languageColours[language]
-                };
-                return <span key={language} className="label" style={style}>{language}</span>;
+                return <span key={language} className="label projects__project--label">{language}</span>;
               }, this)}
             </div>
           </div>

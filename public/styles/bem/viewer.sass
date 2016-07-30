@@ -1,6 +1,24 @@
 .viewer
   border-radius: $border-radius
-  border: 1px solid $light-highlight
   padding: 15px
-  background-color: $white
+  border: 1px solid $border-colour
+  background-color: lighten($white, 2)
   height: 100%
+
+  &__shift
+    &-height
+      @include transition(height 500ms ease)
+
+    &-enter, &-appear
+      @include transform(translate3d(-100%, 0, 0))
+
+      &-active
+        @include transform(translate3d(0, 0, 0))
+        @include transition(transform 500ms ease)
+
+    &-leave
+      @include transform(translate3d(0, 0, 0))
+
+      &-active
+        @include transform(translate3d(100%, 0, 0))
+        @include transition(transform 500ms ease)

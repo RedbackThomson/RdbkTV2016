@@ -16,6 +16,12 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
+  resolve: {
+    alias: {
+      'react': path.join(__dirname, 'node_modules', 'react')
+    },
+    extensions: ['', '.js']
+  },
   module: {
     loaders: [{
       test: /\.js$/,

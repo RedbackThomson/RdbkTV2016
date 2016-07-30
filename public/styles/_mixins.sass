@@ -1,0 +1,23 @@
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg)
+  background-repeat: repeat-x
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color)
+  background-image: -o-linear-gradient($deg, $start-color, $end-color)
+  background-image: linear-gradient($deg, $start-color, $end-color)
+
+@mixin box-shadow($top, $left, $blur, $color)
+  -webkit-box-shadow: $top $left $blur $color
+  -moz-box-shadow: $top $left $blur $color
+  box-shadow: $top $left $blur $color
+
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+@mixin transform($val)
+  -webkit-transform: $val
+  -moz-transform: $val
+  -ms-transform: $val
+  transform: $val

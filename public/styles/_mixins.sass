@@ -21,3 +21,16 @@
   -moz-transform: $val
   -ms-transform: $val
   transform: $val
+
+@mixin background-size($type)
+  -webkit-background-size: $type
+  -moz-background-size: $type
+  -o-background-size: $type
+  background-size: $type
+
+@mixin filter($args...)
+  -webkit-filter: $args
+  -moz-filter: $args
+  -o-filter: $args
+  -ms-filter: $args
+  filter: $args

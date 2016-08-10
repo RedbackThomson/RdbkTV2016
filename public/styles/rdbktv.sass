@@ -28,8 +28,20 @@ a
 img
   border-radius: $border-radius
 
+.background-image
+  @include background-size(cover)
+  @include transition(background-color 500ms ease)
+  
+  background-color: $background
+  background-position: center center;
+  height: 100%
+  width: 100%
+  position: absolute
+  z-index: -1
+
 .thumbnail
   border-radius: $border-radius
+  box-shadow: none
   &:hover, &:focus
     box-shadow: 0 0 6px 1px rgba(110, 60, 175, 0.5)
 

@@ -1,9 +1,20 @@
 [
   {
+    "name": "SD Hacks 2016",
+    "subtitle": "More than 1,500 registrations",
+    "thumbnail": "img/projects/sdhacks/logo.png",
+    "feature": "img/projects/sdhacks/feature.jpg",
+    "colour": "#5A9AC2",
+    "languages": [
+      "Node", "MongoDB"
+    ]
+  },
+  {
     "name": "LoLAlerter",
     "subtitle": "Over 100,000 daily viewers",
     "thumbnail": "http://placehold.it/90x90",
-    "feature": "http://placehold.it/1000x500",
+    "feature": "img/projects/lolalerter/lolalerter.png",
+    "colour": "#45A9B7",
     "languages": [
       "PHP", "Python"
     ]
@@ -13,6 +24,7 @@
     "subtitle": "500+ daily users",
     "thumbnail": "http://placehold.it/90x90",
     "feature": "http://placehold.it/1000x500",
+    "colour": "#FF0000",
     "languages": [
       "Java", "Javascript"
     ]
@@ -22,6 +34,7 @@
     "subtitle": "Tracked over 200,000 users",
     "thumbnail": "http://placehold.it/90x90",
     "feature": "http://placehold.it/1000x500",
+    "colour": "#00FF00",
     "languages": [
       "Node"
     ]
@@ -31,6 +44,7 @@
     "subtitle": "The home page for a famous",
     "thumbnail": "http://placehold.it/90x90",
     "feature": "http://placehold.it/1000x500",
+    "colour": "#0000FF",
     "languages": [
       "PHP"
     ]

@@ -14,9 +14,11 @@ export default class ProjectViewer extends Component {
           transitionAppearTimeout={500} 
           transitionLeaveTimeout={500}>
           <div className="viewer__container" key={project.name}>
-            <img src={project.feature} />
-            <h1> {project.name} </h1>
-            <h3> {project.subtitle} </h3>
+            <img className="viewer__container--feature" src={project.feature} />
+            <div className="viewer__container--content">
+              <h1> {project.name} </h1>
+              <h3> {project.subtitle} </h3>
+            </div>
           </div>
         </ReactCSSTransitionReplace>
       </div>

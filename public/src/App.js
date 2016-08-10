@@ -19,17 +19,13 @@ export default class App extends Component {
     this.changeCurrent = this.changeCurrent.bind(this);
   }
 
-  replaceLogo() {
-
-  }
-
   componentDidMount() {
     new Vivus('vivus-logo', {
       duration: 100,
       file: 'img/rblogo-outline.svg'
     }, function(obj) {
       obj.el.classList.add('hero__logo--finished');
-    },this.replaceLogo).play();
+    }).play();
   }
 
   //Changes the current project to index new
@@ -39,8 +35,12 @@ export default class App extends Component {
   }
 
   render() {
+    var bgStyle = {
+      backgroundColor: this.state.projects[this.state.current].colour
+    };
     return (
       <div>
+        <div className="background-image" style={bgStyle}></div>
         <header className="hero">
           <div className="row">
             <div className="small-3 columns">
@@ -74,7 +74,6 @@ export default class App extends Component {
             </div>
           </div>
         </section>
-        
       </div>
     );
   }

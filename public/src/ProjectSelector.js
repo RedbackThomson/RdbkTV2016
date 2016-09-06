@@ -3,6 +3,12 @@ import MediaQuery from 'react-responsive'
 import Select from 'react-select'
 
 export default class ProjectSelector extends Component {
+  static propTypes = {
+    projects: React.PropTypes.array.isRequired,
+    onProjectChange: React.PropTypes.func.isRequired,
+    highlight: React.PropTypes.string.isRequired
+  }
+
   constructor(props) {
     super(props);
 

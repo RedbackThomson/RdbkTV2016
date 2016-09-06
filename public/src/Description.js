@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class Description extends Component {
+  static propTypes = {
+  }
+  
   constructor() {
     super();
     this.state = {

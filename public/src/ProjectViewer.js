@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
 
 export default class ProjectViewer extends Component {
+  static propTypes = {
+    project: React.PropTypes.object.isRequired,
+    highlight: React.PropTypes.string.isRequired
+  }
+
   render() {
     var project = this.props.project;
 

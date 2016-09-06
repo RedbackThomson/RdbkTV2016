@@ -1,16 +1,20 @@
-$footer-font-color: $white
+$footer-font-color: $font-color
 
 .footer
-  position: absolute
+  position: static
   bottom: 0
   width: 100%
-  background-color: $primary
-  padding: 2rem 4rem
   text-align: center
   color: $footer-font-color
+  margin-top: 25px
+
+  @media #{$medium-up}
+    margin-top: 100px
 
   &__row
-    max-width: 75em !important
+    background-color: $white
+    border: 1px solid
+    padding: 1rem 4rem
 
   &__icon
     font-size: 100px

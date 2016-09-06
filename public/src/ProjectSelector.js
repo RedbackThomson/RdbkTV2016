@@ -23,8 +23,11 @@ export default class ProjectSelector extends Component {
   }
 
   getItem(project, index) {
+    var highlightStyle = {
+      borderColor: this.props.highlight
+    };
     return (
-      <li className="projects__project" key={index}>
+      <li className="projects__project" key={index} style={highlightStyle}>
         <a onClick={() => this.changeProject(index)}>
           <div className="media-object projects__project--media">
             <div className="media-object-section">

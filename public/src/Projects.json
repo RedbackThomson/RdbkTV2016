@@ -1,23 +1,32 @@
 [
   {
-    "name": "SD Hacks 2016",
+    "name": "SD Hacks",
     "subtitle": "More than 1,500 registrations",
+    "url": "https://www.sdhacks.io/",
+    "start_date": "June, 2016",
+    "end_date": "September, 2016",
+    "source": "https://github.com/SDHacks/SDHacks2016",
     "thumbnail": "img/projects/sdhacks/logo.png",
     "feature": "img/projects/sdhacks/feature.jpg",
     "colour": "#5A9AC2",
     "languages": [
       "Node", "MongoDB"
-    ]
+    ],
+    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
   },
   {
     "name": "LoLAlerter",
     "subtitle": "Over 100,000 daily viewers",
+    "start_date": "August, 2014",
+    "end_date": "February, 2015",
+    "source": "https://github.com/RedbackThomson/LoLAlerter",
     "thumbnail": "http://placehold.it/90x90",
     "feature": "img/projects/lolalerter/lolalerter.png",
     "colour": "#45A9B7",
     "languages": [
       "PHP", "Python"
-    ]
+    ],
+    "body": ""
   },
   {
     "name": "osu!Celebrity",
@@ -27,7 +36,8 @@
     "colour": "#FF0000",
     "languages": [
       "Java", "Javascript"
-    ]
+    ],
+    "body": ""
   },
   {
     "name": "osu!Track",
@@ -37,7 +47,8 @@
     "colour": "#00FF00",
     "languages": [
       "Node"
-    ]
+    ],
+    "body": ""
   },
   {
     "name": "Mylixia",
@@ -47,6 +58,7 @@
     "colour": "#0000FF",
     "languages": [
       "PHP"
-    ]
+    ],
+    "body": ""
   }
 ]

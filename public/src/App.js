@@ -30,17 +30,16 @@ export default class App extends Component {
 
   //Changes the current project to index new
   changeCurrent(newIndex) {
-    if(newIndex < this.state.projects.length)
+    if(newIndex < this.state.projects.length) {
       this.setState({'current': newIndex});
+    }
   }
 
   render() {
-    var bgStyle = {
-      backgroundColor: this.state.projects[this.state.current].colour
-    };
+    var highlight = this.state.projects[this.state.current].colour;
     return (
       <div>
-        <div className="background-image" style={bgStyle}></div>
+        <div className="background-image"></div>
         <header className="hero">
           <div className="row">
             <div className="small-3 columns">
@@ -66,14 +65,15 @@ export default class App extends Component {
         <section>
           <div className="row">
             <div className="small-12 large-4 columns">
-              <ProjectSelector projects={this.state.projects} onProjectChange={this.changeCurrent}>
+              <ProjectSelector projects={this.state.projects} onProjectChange={this.changeCurrent} highlight={highlight}>
               </ProjectSelector>
             </div>
             <div className="small-12 large-8 columns">
-              <ProjectViewer project={this.state.projects[this.state.current]}></ProjectViewer>
+              <ProjectViewer project={this.state.projects[this.state.current]} highlight={highlight}></ProjectViewer>
             </div>
           </div>
         </section>
+        <Footer highlight={highlight}></Footer>
       </div>
     );
   }

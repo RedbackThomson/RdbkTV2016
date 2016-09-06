@@ -9,9 +9,24 @@ export default class ProjectViewer extends Component {
 
   render() {
     var project = this.props.project;
+    var highlightStyle = {
+      borderColor: this.props.highlight
+    };
+    var backgroundHighlight = {
+      backgroundColor: this.props.highlight
+    };
+    var colorHighlight = {
+      color: this.props.highlight
+    };
+    var showSource = {
+      display: (project.source ? "block" : "none")
+    };
+    var showLink = {
+      display: (project.url ? "block" : "none")
+    };
 
     return (
-      <div className="viewer">
+      <div className="viewer" style={highlightStyle}>
         <ReactCSSTransitionReplace 
           transitionName="viewer__shift" 
           transitionAppear={false}
@@ -21,8 +36,25 @@ export default class ProjectViewer extends Component {
           <div className="viewer__container" key={project.name}>
             <img className="viewer__container--feature" src={project.feature} />
             <div className="viewer__container--content">
-              <h1> {project.name} </h1>
-              <h3> {project.subtitle} </h3>
+              <div className="row">
+                <h1 className={`viewer__title columns small-12 medium-${project.source ? "9" : "12"}`} style={colorHighlight}> {project.name} </h1>
+                <span className="viewer__source medium-3 small-12 columns" style={showSource}>
+                  <a className="button viewer__source-button" style={backgroundHighlight} href={project.source} target="_blank">
+                    <i aria-hidden="true" className="material-icons viewer__source--left">insert_drive_file</i> 
+                    <span className="viewer__source--vertical">&nbsp;Source</span>
+                  </a>
+                </span>
+              </div>
+              <div className="row">
+                <h3 className={`viewer__subline columns small-12 medium-${project.url ? "9" : "12"}`}> <small className="viewer__subline--small">from</small> {project.start_date} <small className="viewer__subline--small">until</small> {project.end_date} </h3>
+                <span className="viewer__link medium-3 small-12 columns" style={showLink}>
+                  <a className="button viewer__link-button" style={backgroundHighlight} href={project.url} target="_blank">
+                    <i aria-hidden="true" className="material-icons viewer__link--left">http</i> 
+                    <span className="viewer__source--vertical">&nbsp;Link</span>
+                  </a>
+                </span>
+              </div>
+              <p className="viewer__body"> {project.body} </p>
             </div>
           </div>
         </ReactCSSTransitionReplace>

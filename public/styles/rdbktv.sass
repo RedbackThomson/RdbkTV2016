@@ -18,12 +18,14 @@ body
   font-family: 'Oxygen', sans-serif
   background-color: $background
   color: $font-color
+  --highlight-color: #000
 
 a
   color: inherit
 
   &:hover, &:focus, &:active
-    color: lighten($primary, 10)
+    // color: lighten($primary, 10)
+    color: $font-color
 
 img
   border-radius: $border-radius
@@ -43,6 +45,13 @@ img
   border-radius: $border-radius
   box-shadow: none
   &:hover, &:focus
-    box-shadow: 0 0 6px 1px rgba(110, 60, 175, 0.5)
+    box-shadow: none
+
+.button
+  *:focus
+    outline: none
+
+  &:focus
+    outline: none
 
 @import 'react-select/default.scss'

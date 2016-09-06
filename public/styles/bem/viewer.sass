@@ -1,11 +1,73 @@
 .viewer
-  border-radius: $border-radius
   background-color: lighten($white, 2)
   height: 100%
+  border: 1px solid
 
   &__container
+    &--feature
+      border-radius: 0
+
     &--content
+      @include transition(border-color 200ms ease)
       padding: 15px
+      height: 100%
+
+  &__title
+    color: $dark-highlight
+    font-size: 2.5em
+
+  &__subline
+    font-size: 1.5em
+    margin-top: -0.75em
+
+    &--small
+      color: $font-color
+
+  &__source
+    text-align: right
+
+    &--vertical
+      display: inline-block
+      vertical-align: middle
+
+    &--left
+      position: absolute
+      top: 8px
+      left: 5px
+
+  &__source-button
+    position: relative
+    margin-top: 8.5px
+    margin-bottom: 2rem
+    width: 100%
+
+    @media #{$medium-up}
+      margin-bottom: 1rem
+
+  &__link
+    text-align: right
+    margin-top: -0.75em
+
+    &--vertical
+      display: inline-block
+      vertical-align: middle
+      line-height: 27px
+
+    &--left
+      position: absolute
+      left: 5px
+
+  &__link-button
+    position: relative
+    height: 27px
+    line-height: 20px
+    margin-top: 1rem
+    padding-top: 0
+    padding-bottom: 0
+    width: 100%
+
+    @media #{$medium-up}
+      margin-top: -3px
 
   &__shift
     &-height

@@ -19,13 +19,13 @@ export default class Description extends Component {
       <footer className="footer row column">
         <div className="footer__row" style={highlightStyle}>
           <div className="row">
-            <div className="small-12 columns">
+            <div className="small-12 medium-6 columns">
               <ul className="footer__links">
                 <li><a className="footer__text footer__text--link" href="#">What I Do</a></li>
                 <li><a className="footer__text footer__text--link" href="#">Pricing</a></li>
               </ul>
             </div>
-            <div className="small-12 columns">
+            <div className="small-12 medium-6 columns">
               <ul className="footer__links">
                 <li><a className="footer__text footer__text--link" href="#">GitHub</a></li>
                 <li><a className="footer__text footer__text--link" href="#">Facebook</a></li>

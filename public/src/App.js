@@ -38,31 +38,31 @@ export default class App extends Component {
   render() {
     var highlight = this.state.projects[this.state.current].colour;
     return (
-      <div>
+      <div className="wrapper">
         <div className="background-image"></div>
-        <header className="hero">
-          <div className="row">
-            <div className="small-3 columns">
-              <div className="hero__logo" id="vivus-logo">
-              </div>
-            </div>
-            <div className="small-9 columns">
-              <div className="row">
-                <div className="small-12 columns">
-                  <h1 className="hero__name">
-                    <span className="hero__name--redback">Redback</span> 
-                    <span className="hero__name--thomson">Thomson</span> 
-                  </h1>
+        <section className="content">
+          <header className="hero">
+            <div className="row">
+              <div className="small-3 columns">
+                <div className="hero__logo" id="vivus-logo">
                 </div>
+              </div>
+              <div className="small-9 columns">
+                <div className="row">
+                  <div className="small-12 columns">
+                    <h1 className="hero__name">
+                      <span className="hero__name--redback">Redback</span> 
+                      <span className="hero__name--thomson">Thomson</span> 
+                    </h1>
+                  </div>
 
-                <div className="small-12 columns">
-                  <Description></Description>
+                  <div className="small-12 columns">
+                    <Description></Description>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </header>
-        <section>
+          </header>
           <div className="row">
             <div className="small-12 large-4 columns">
               <ProjectSelector projects={this.state.projects} onProjectChange={this.changeCurrent} highlight={highlight}>

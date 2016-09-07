@@ -1,19 +1,21 @@
 $footer-font-color: $font-color
 
 .footer
-  position: static
-  bottom: 0
   width: 100%
   text-align: center
   color: $footer-font-color
   margin-top: 25px
+  margin-bottom: 10px
+
+  background-color: $white
+  background-clip: content-box
 
   @media #{$medium-up}
     margin-top: 35px
+    margin-bottom: 15px
 
   &__row
-    background-color: $white
-    border: 1px solid
+    border: 1px solid black
     padding: 1rem 4rem
 
   &__icon

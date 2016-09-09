@@ -14,11 +14,11 @@
     "link": "https://twitter.com/RedbackThomson"
   },
   {
-    "name": "reddit",
-    "colour": "#e74a1e",
-    "hover": "DM me",
-    "icon": "socicon-reddit",
-    "link": "https://reddit.com/u/Redback93"
+    "name": "git",
+    "colour": "#221e1b",
+    "hover": "Fork me",
+    "icon": "socicon-github",
+    "link": "https://github.com/RedbackThomson"
   },
   {
     "name": "email",
@@ -28,10 +28,10 @@
     "link": "mailto:redbackthomson@gmail.com"
   },
   {
-    "name": "git",
-    "colour": "#221e1b",
-    "hover": "Fork me",
-    "icon": "socicon-github",
-    "link": "https://github.com/RedbackThomson"
+    "name": "reddit",
+    "colour": "#e74a1e",
+    "hover": "DM me",
+    "icon": "socicon-reddit",
+    "link": "https://reddit.com/u/Redback93"
   }
 ]

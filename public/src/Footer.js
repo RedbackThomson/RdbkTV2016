@@ -5,7 +5,6 @@ import Radium from 'radium';
 @Radium
 export default class Description extends Component {
   static propTypes = {
-    highlight: React.PropTypes.string.isRequired,
     contact: React.PropTypes.array.isRequired
   }
 
@@ -14,14 +13,11 @@ export default class Description extends Component {
   }
 
   render() {
-    var highlightStyle = {
-      borderColor: this.props.highlight
-    };
     var hoverColours = {};
 
     return (
       <footer className="footer row column">
-        <div className="footer__row" style={highlightStyle}>
+        <div className="footer__row">
           <div className="row column">
               <ul className="footer__links">
               {this.props.contact.map(function(contact, i) {
@@ -33,7 +29,7 @@ export default class Description extends Component {
 
                 return (
                 <li className="footer__link">
-                  <a href={contact.link} alt={contact.name} title={contact.hover} style={hoverColour} key={contact.name}><i className={contact.icon}></i></a>
+                  <a key={contact.name} href={contact.link} alt={contact.name} title={contact.hover} style={hoverColour} key={contact.name}><i className={contact.icon}></i></a>
                 </li>);
               }, this)}
               </ul>

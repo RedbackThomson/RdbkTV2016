@@ -18,7 +18,7 @@ export default class ProjectViewer extends Component {
     var hoverBackgroundHighlight = {
       backgroundColor: this.props.highlight,
       ':hover': {
-        backgroundColor: color(this.props.highlight).lighten(0.1).hexString()
+        backgroundColor: color(this.props.highlight).lighten(0.075).hexString()
       }
     };
     var colorHighlight = {
@@ -55,7 +55,7 @@ export default class ProjectViewer extends Component {
                 <h3 className={`viewer__subline columns small-12 medium-${project.url ? "9" : "12"}`}> <small className="viewer__subline--small">from</small> {project.start_date} <small className="viewer__subline--small">until</small> {project.end_date} </h3>
                 <span className="viewer__link medium-3 small-12 columns" style={showLink}>
                   <a className="button viewer__link-button" style={hoverBackgroundHighlight} href={project.url} target="_blank" key={"Link"+project.name}>
-                    <i aria-hidden="true" className="material-icons viewer__link--left">http</i> 
+                    <i aria-hidden="true" className="material-icons viewer__link--left">remove_red_eye</i> 
                     <span className="viewer__source--vertical">&nbsp;Link</span>
                   </a>
                 </span>

@@ -65,6 +65,7 @@ export default class App extends Component {
               </div>
             </div>
           </header>
+          <Footer contact={this.state.contact}></Footer>
           <div className="row">
             <div className="small-12 large-4 columns">
               <ProjectSelector projects={this.state.projects} onProjectChange={this.changeCurrent} highlight={highlight}>
@@ -75,7 +76,6 @@ export default class App extends Component {
             </div>
           </div>
         </section>
-        <Footer highlight={highlight} contact={this.state.contact}></Footer>
       </div>
     );
   }

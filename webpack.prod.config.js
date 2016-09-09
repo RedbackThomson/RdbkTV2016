@@ -2,19 +2,23 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
     './public/src/index'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public/static/'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false
+      }
+    })
   ],
   resolve: {
     alias: {
@@ -36,6 +40,9 @@ module.exports = {
     }, {
       test: /\.coffee$/, 
       loader: "coffee-loader"
+    }, {
+      test: /\.json$/,
+      loader: "json"
     }]
   }
 };

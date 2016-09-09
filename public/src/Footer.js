@@ -28,8 +28,8 @@ export default class Description extends Component {
                 };
 
                 return (
-                <li className="footer__link">
-                  <a key={contact.name} href={contact.link} alt={contact.name} title={contact.hover} style={hoverColour} key={contact.name}><i className={contact.icon}></i></a>
+                <li className="footer__link" key={contact.name}>
+                  <a href={contact.link} alt={contact.name} title={contact.hover} style={hoverColour} key={contact.name}><i className={contact.icon}></i></a>
                 </li>);
               }, this)}
               </ul>

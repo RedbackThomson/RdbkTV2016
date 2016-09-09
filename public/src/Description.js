@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionReplace from 'react-css-transition-replace';
 
 export default class Description extends Component {
   static propTypes = {
@@ -8,7 +8,7 @@ export default class Description extends Component {
   constructor() {
     super();
     this.state = {
-      currentDescriptions: []
+      currentDescription: ""
     };
     this.descriptionPeriod = 2500;
     this.descriptionIndex = -1;
@@ -39,23 +39,19 @@ export default class Description extends Component {
 
   changeDescription() {
     this.descriptionIndex = (this.descriptionIndex + 1) % this.descriptions.length;
-    var newDescriptions = [this.descriptions[this.descriptionIndex]];
-    this.setState({currentDescriptions: newDescriptions});
+    this.setState({currentDescription: this.descriptions[this.descriptionIndex]});
   }
 
   render() {
-    var descriptions = this.state.currentDescriptions.map(function(item, i) {
-      return (<div className="hero__description" key={item}> { item } </div>);
-    });
     return (
-      <ReactCSSTransitionGroup 
+      <ReactCSSTransitionReplace 
         transitionName="description-shift" 
         transitionAppear={true}
         transitionEnterTimeout={500}
         transitionAppearTimeout={500} 
         transitionLeaveTimeout={500}>
-        {descriptions}
-      </ReactCSSTransitionGroup>
+        <div className="hero__description" key={this.state.currentDescription}>{this.state.currentDescription}</div>
+      </ReactCSSTransitionReplace>
     );
   }
 }

@@ -18,8 +18,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'react': path.join(__dirname, 'node_modules', 'react'),
-      'color': path.join(__dirname, 'node_modules', 'color')
+      'react': path.join(__dirname, 'node_modules', 'react')
     },
     extensions: ['', '.js']
   },

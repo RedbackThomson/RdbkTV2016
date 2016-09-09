@@ -9,7 +9,7 @@
 // Variables
 // ------------------------------
 
-$select-primary-color:             $dark-highlight !default;
+$select-primary-color:             $primary !default;
 
 // control options
 $select-input-bg:                  #fff !default;
@@ -29,7 +29,7 @@ $select-padding-horizontal:        10px !default;
 
 // menu options
 $select-menu-zindex:               1000 !default;
-$select-menu-max-height:           200px !default;
+$select-menu-max-height:           300px !default;
 
 $select-option-color:              lighten($select-text-color, 20%) !default;
 $select-option-bg:                 $select-input-bg !default;

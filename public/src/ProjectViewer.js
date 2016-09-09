@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import ReactCSSTransitionReplace from 'react-css-transition-replace';
-import Radium from 'radium';
-import color from 'color';
+import React, { Component } from 'react'
+import ReactCSSTransitionReplace from 'react-css-transition-replace'
+import Radium from 'radium'
+import color from 'color'
 
 import ProjectCarousel from './ProjectCarousel.js'
 
@@ -54,7 +54,10 @@ export default class ProjectViewer extends Component {
                 </span>
               </div>
               <div className="row">
-                <h3 className={`viewer__subline columns small-12 medium-${project.url ? "9" : "12"}`}> <small className="viewer__subline--small">from</small> {project.start_date} <small className="viewer__subline--small">until</small> {project.end_date} </h3>
+                <h3 className={`viewer__subline columns small-12 medium-${project.url ? "9" : "12"}`}> 
+                  <small className="viewer__subline--small">from</small> {project.start_date} 
+                  <small className="viewer__subline--small"> until</small> {project.end_date} 
+                </h3>
                 <span className="viewer__link medium-3 small-12 columns" style={showLink}>
                   <a className="button viewer__link-button" style={hoverBackgroundHighlight} href={project.url} target="_blank" key={"Link"+project.name}>
                     <i aria-hidden="true" className="material-icons viewer__link--left">remove_red_eye</i> 

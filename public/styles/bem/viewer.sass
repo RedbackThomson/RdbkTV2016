@@ -1,7 +1,7 @@
 .viewer
   background-color: lighten($white, 2)
-  height: 100%
   border: 1px solid
+  margin-bottom: 15px
   @include transition(border 500ms ease)
 
   &__container
@@ -82,8 +82,10 @@
       @include transition(box-shadow 200ms ease)
 
   &__image
-    min-height: 10em
     max-width: 100%
+
+    img
+      margin: 0 auto
 
   &__shift
     &-height

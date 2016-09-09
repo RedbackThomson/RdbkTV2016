@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import jQuery from 'jquery';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import jQuery from 'jquery'
 
 export default class ProjectCarousel extends Component {
   static propTypes = {
@@ -9,7 +9,8 @@ export default class ProjectCarousel extends Component {
 
   componentDidMount() {
     var $this = jQuery(ReactDOM.findDOMNode(this));
-    $this.slick({
+    $this
+    .slick({
       dots: true,
       adaptiveHeight: true,
       mobileFirst: true,
@@ -24,7 +25,7 @@ export default class ProjectCarousel extends Component {
 
   render() {
     return (
-      <div>
+      <div className="viewer__slider">
         {this.props.project.images.map(function(image, i) {
           return (<div className="viewer__image" key={image}><img src={image} /></div>);
         })}

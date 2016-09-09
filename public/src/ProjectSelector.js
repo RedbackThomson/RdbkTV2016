@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
 import Select from 'react-select'
+import Radium from 'radium'
+import $ from 'jquery'
+import color from 'color'
 
+@Radium
 export default class ProjectSelector extends Component {
   static propTypes = {
     projects: React.PropTypes.array.isRequired,
@@ -15,6 +19,14 @@ export default class ProjectSelector extends Component {
     this.state = {
       lastIndex: 0
     };
+  }
+
+  componentDidMount() {
+    this.changeMobileHighlight(this.props.highlight);
+  }
+
+  componentDidUpdate() {
+    this.changeMobileHighlight(this.props.highlight); 
   }
 
   changeProject(index) {
@@ -46,6 +58,14 @@ export default class ProjectSelector extends Component {
     );
   }
 
+  changeMobileHighlight(highlight) {
+    var control = $(".Select-control");
+
+    var lighter = color(highlight).lighten(0.05).hexString();
+    control.css('border-color', highlight + " " + lighter + " " + lighter);
+    control.css('box-shadow', 'inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px -1px fade(' + highlight + ',50%)');
+  }
+
   render() {
     var self = this;
     var mobileOptions = [];
@@ -70,6 +90,7 @@ export default class ProjectSelector extends Component {
             searchable={false} 
             clearable={false} 
             value={this.state.lastIndex}
+            pageSize={20}
             optionComponent={MobileProjectOption}
             valueComponent={MobileProjectValue} />    
         </MediaQuery>

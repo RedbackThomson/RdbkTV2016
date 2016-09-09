@@ -44,7 +44,7 @@ export default class App extends Component {
   preloadImages(projects) {
     projects.forEach(function(project) {
       project.images.forEach(function(image) {
-        $('<img/>')[0].src = image;
+        $(document.createElement('img')).attr('src', image);
       });
     });
   }

@@ -1,7 +1,7 @@
 [
   {
     "name": "SD Hacks",
-    "subtitle": "More than 1,500 registrations",
+    "subtitle": "More than 3,000 registrations",
     "url": "https://www.sdhacks.io/",
     "start_date": "June, 2016",
     "end_date": "September, 2016",
@@ -9,13 +9,47 @@
     "thumbnail": "img/projects/sdhacks/logo.png",
     "images": [
       "img/projects/sdhacks/feature.jpg",
-      "img/projects/lolalerter/lolalerter.png"
+      "img/projects/sdhacks/website.jpg",
+      "img/projects/sdhacks/resume_browser.jpg"
     ],
     "colour": "#5A9AC2",
     "languages": [
-      "Node", "MongoDB"
+      "Node", "MongoDB", "Heroku"
     ],
     "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  {
+    "name": "Market Monitor",
+    "subtitle": "Hybrid cross-platform app",
+    "start_date": "August, 2015",
+    "end_date": "October, 2015",
+    "source": "https://github.com/RedbackThomson/MarketMonitor",
+    "thumbnail": "img/projects/marketmonitor/logo.png",
+    "images": [
+      "img/projects/marketmonitor/preview.jpg"
+    ],
+    "colour": "#486CD0",
+    "languages": [
+      "Javascript", "Ionic"
+    ],
+    "body": ""
+  },
+  {
+    "name": "osu!Celebrity",
+    "subtitle": "500+ daily users",
+    "start_date": "August, 2015",
+    "end_date": "March, 2016",
+    "source": "https://github.com/OsuCelebrity/OsuCelebrity",
+    "thumbnail": "img/projects/osucelebrity/logo.png",
+    "images": [
+      "img/projects/osucelebrity/preview.jpg",
+      "img/projects/osucelebrity/twitch.jpg"
+    ],
+    "colour": "#E963A1",
+    "languages": [
+      "Java", "Javascript"
+    ],
+    "body": ""
   },
   {
     "name": "LoLAlerter",
@@ -23,9 +57,10 @@
     "start_date": "August, 2014",
     "end_date": "February, 2015",
     "source": "https://github.com/RedbackThomson/LoLAlerter",
-    "thumbnail": "http://placehold.it/90x90",
+    "thumbnail": "img/projects/lolalerter/logo.png",
     "images": [
-      "img/projects/lolalerter/lolalerter.png"
+      "img/projects/lolalerter/website.jpg",
+      "img/projects/lolalerter/inner.jpg"
     ],
     "colour": "#45A9B7",
     "languages": [
@@ -34,36 +69,52 @@
     "body": ""
   },
   {
-    "name": "osu!Celebrity",
-    "subtitle": "500+ daily users",
-    "thumbnail": "http://placehold.it/90x90",
-    "feature": "http://placehold.it/1000x500",
-    "colour": "#FF0000",
+    "name": "LoLShadow",
+    "subtitle": "Over 1,000 active users",
+    "start_date": "September, 2014",
+    "end_date": "February, 2015",
+    "source": "https://github.com/RedbackThomson/LoLShadow",
+    "thumbnail": "img/projects/lolshadow/logo.png",
+    "images": [
+      "img/projects/lolshadow/feature.jpg",
+      "img/projects/lolshadow/inner.jpg"
+    ],
+    "colour": "#45A9B7",
     "languages": [
-      "Java", "Javascript"
+      "PHP", "Python"
     ],
     "body": ""
   },
   {
     "name": "osu!Track",
     "subtitle": "Tracked over 200,000 users",
-    "thumbnail": "http://placehold.it/90x90",
-    "feature": "http://placehold.it/1000x500",
-    "colour": "#00FF00",
+    "start_date": "June, 2014",
+    "end_date": "January, 2015",
+    "thumbnail": "img/projects/osutrack/logo.png",
+    "url": "https://ameobea.me/osutrack/",
+    "images": [
+      "img/projects/osutrack/preview.jpg",
+      "img/projects/osutrack/profile.jpg"
+    ],
+    "colour": "#C88997",
     "languages": [
-      "Node"
+      "PHP", "Bootstrap"
     ],
     "body": ""
   },
   {
     "name": "Mylixia",
-    "subtitle": "The home page for a famous",
-    "thumbnail": "http://placehold.it/90x90",
-    "feature": "http://placehold.it/1000x500",
-    "colour": "#0000FF",
-    "languages": [
-      "PHP"
+    "subtitle": "Community homepage",
+    "start_date": "September, 2013",
+    "end_date": "October, 2013",
+    "thumbnail": "img/projects/mylixia/logo.png",
+    "images": [
+      "img/projects/mylixia/preview.jpg"
     ],
-    "body": ""
+    "colour": "#6386C2",
+    "languages": [
+      "Node", "MongoDB", "Heroku"
+    ],
+    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
   }
 ]

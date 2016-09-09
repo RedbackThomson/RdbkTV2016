@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import $ from 'jquery';
 import Vivus from '../bower_components/vivus/dist/vivus.js'
 
 import Description from './Description.js'
@@ -22,6 +23,8 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    this.preloadImages(this.state.projects);
+
     new Vivus('vivus-logo', {
       duration: 100,
       file: 'img/rblogo-outline.svg'
@@ -35,6 +38,15 @@ export default class App extends Component {
     if(newIndex < this.state.projects.length) {
       this.setState({'current': newIndex});
     }
+  }
+
+  // Preloads all of the images to reduce jumpiness
+  preloadImages(projects) {
+    projects.forEach(function(project) {
+      project.images.forEach(function(image) {
+        $('<img/>')[0].src = image;
+      });
+    });
   }
 
   render() {

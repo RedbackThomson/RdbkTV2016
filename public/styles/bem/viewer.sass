@@ -2,13 +2,13 @@
   background-color: lighten($white, 2)
   height: 100%
   border: 1px solid
+  @include transition(border 500ms ease)
 
   &__container
     &--feature
       border-radius: 0
 
     &--content
-      @include transition(border-color 200ms ease)
       padding: 15px
       height: 100%
 

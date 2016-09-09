@@ -22,7 +22,7 @@
   },
   {
     "name": "email",
-    "colour": "#000000",
+    "colour": "#555555",
     "hover": "Email me",
     "icon": "socicon-mail",
     "link": "mailto:redbackthomson@gmail.com"

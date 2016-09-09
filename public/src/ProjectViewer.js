@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
+import Radium from 'radium';
+import color from 'color';
 
+@Radium
 export default class ProjectViewer extends Component {
   static propTypes = {
     project: React.PropTypes.object.isRequired,
@@ -12,8 +15,11 @@ export default class ProjectViewer extends Component {
     var highlightStyle = {
       borderColor: this.props.highlight
     };
-    var backgroundHighlight = {
-      backgroundColor: this.props.highlight
+    var hoverBackgroundHighlight = {
+      backgroundColor: this.props.highlight,
+      ':hover': {
+        backgroundColor: color(this.props.highlight).lighten(0.1).hexString()
+      }
     };
     var colorHighlight = {
       color: this.props.highlight
@@ -39,7 +45,7 @@ export default class ProjectViewer extends Component {
               <div className="row">
                 <h1 className={`viewer__title columns small-12 medium-${project.source ? "9" : "12"}`} style={colorHighlight}> {project.name} </h1>
                 <span className="viewer__source medium-3 small-12 columns" style={showSource}>
-                  <a className="button viewer__source-button" style={backgroundHighlight} href={project.source} target="_blank">
+                  <a className="button viewer__source-button" style={hoverBackgroundHighlight} href={project.source} target="_blank" key={"Source"+project.name}>
                     <i aria-hidden="true" className="material-icons viewer__source--left">insert_drive_file</i> 
                     <span className="viewer__source--vertical">&nbsp;Source</span>
                   </a>
@@ -48,7 +54,7 @@ export default class ProjectViewer extends Component {
               <div className="row">
                 <h3 className={`viewer__subline columns small-12 medium-${project.url ? "9" : "12"}`}> <small className="viewer__subline--small">from</small> {project.start_date} <small className="viewer__subline--small">until</small> {project.end_date} </h3>
                 <span className="viewer__link medium-3 small-12 columns" style={showLink}>
-                  <a className="button viewer__link-button" style={backgroundHighlight} href={project.url} target="_blank">
+                  <a className="button viewer__link-button" style={hoverBackgroundHighlight} href={project.url} target="_blank" key={"Link"+project.name}>
                     <i aria-hidden="true" className="material-icons viewer__link--left">http</i> 
                     <span className="viewer__source--vertical">&nbsp;Link</span>
                   </a>

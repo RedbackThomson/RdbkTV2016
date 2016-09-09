@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Radium from 'radium';
 
+@Radium
 export default class Description extends Component {
   static propTypes = {
-    highlight: React.PropTypes.string.isRequired
+    highlight: React.PropTypes.string.isRequired,
+    contact: React.PropTypes.array.isRequired
   }
 
   constructor() {
@@ -14,23 +17,26 @@ export default class Description extends Component {
     var highlightStyle = {
       borderColor: this.props.highlight
     };
+    var hoverColours = {};
 
     return (
       <footer className="footer row column">
         <div className="footer__row" style={highlightStyle}>
-          <div className="row">
-            <div className="small-12 medium-6 columns">
+          <div className="row column">
               <ul className="footer__links">
-                <li><a className="footer__text footer__text--link" href="#">What I Do</a></li>
-                <li><a className="footer__text footer__text--link" href="#">Pricing</a></li>
+              {this.props.contact.map(function(contact, i) {
+                var hoverColour = {
+                  ":hover": {
+                    "color": contact.colour
+                  }
+                };
+
+                return (
+                <li className="footer__link">
+                  <a href={contact.link} alt={contact.name} title={contact.hover} style={hoverColour} key={contact.name}><i className={contact.icon}></i></a>
+                </li>);
+              }, this)}
               </ul>
-            </div>
-            <div className="small-12 medium-6 columns">
-              <ul className="footer__links">
-                <li><a className="footer__text footer__text--link" href="#">GitHub</a></li>
-                <li><a className="footer__text footer__text--link" href="#">Facebook</a></li>
-              </ul>
-            </div>
           </div>
         </div>
       </footer>

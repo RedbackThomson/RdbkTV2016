@@ -1,0 +1,37 @@
+[
+  {
+    "name": "skype",
+    "colour": "#28abe3",
+    "hover": "Call me",
+    "icon": "socicon-skype",
+    "link": "skype:Redback93Public"
+  },
+  {
+    "name": "twitter",
+    "colour": "#4da7de",
+    "hover": "Tweet at me",
+    "icon": "socicon-twitter",
+    "link": "https://twitter.com/RedbackThomson"
+  },
+  {
+    "name": "reddit",
+    "colour": "#e74a1e",
+    "hover": "DM me",
+    "icon": "socicon-reddit",
+    "link": "https://reddit.com/u/Redback93"
+  },
+  {
+    "name": "email",
+    "colour": "#000000",
+    "hover": "Email me",
+    "icon": "socicon-mail",
+    "link": "mailto:redbackthomson@gmail.com"
+  },
+  {
+    "name": "git",
+    "colour": "#221e1b",
+    "hover": "Fork me",
+    "icon": "socicon-github",
+    "link": "https://github.com/RedbackThomson"
+  }
+]

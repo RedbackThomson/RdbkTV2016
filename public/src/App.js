@@ -7,6 +7,7 @@ import ProjectSelector from './ProjectSelector.js'
 import ProjectViewer from './ProjectViewer.js'
 
 var projects = require('json!./Projects.json');
+var contact = require('json!./Contact.json');
 
 export default class App extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class App extends Component {
 
     this.state = {
       'projects': projects,
+      'contact': contact,
       'current': 0,
     };
     this.changeCurrent = this.changeCurrent.bind(this);
@@ -73,7 +75,7 @@ export default class App extends Component {
             </div>
           </div>
         </section>
-        <Footer highlight={highlight}></Footer>
+        <Footer highlight={highlight} contact={this.state.contact}></Footer>
       </div>
     );
   }

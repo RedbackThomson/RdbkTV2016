@@ -10,6 +10,10 @@
 @import 'bem/projects.sass'
 @import 'bem/viewer.sass'
 
+*
+  min-height: 0;
+  min-width: 0;
+
 :focus
   outline-color:  $primary
 
@@ -62,3 +66,32 @@ img
     outline: none
 
 @import 'react-select/default.scss'
+
+/* Slick Overrides */
+.slick-track
+  
+
+.slick-list
+  @include transition(height 200ms ease)
+
+.slick-next, .slick-prev
+  top: 20px
+  z-index: 10
+
+  &:before
+    color: $light-highlight
+
+.slick-next
+  right: 10px
+
+.slick-prev
+  left: 10px
+
+.slick-dots li button:before
+  color: $light-highlight
+  opacity: 1
+  font-size: 10pt
+
+.slick-dots li.slick-active button:before
+  opacity: 1
+  color: $primary

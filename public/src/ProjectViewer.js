@@ -3,6 +3,8 @@ import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import Radium from 'radium';
 import color from 'color';
 
+import ProjectCarousel from './ProjectCarousel.js'
+
 @Radium
 export default class ProjectViewer extends Component {
   static propTypes = {
@@ -40,7 +42,7 @@ export default class ProjectViewer extends Component {
           transitionAppearTimeout={500} 
           transitionLeaveTimeout={500}>
           <div className="viewer__container" key={project.name}>
-            <img className="viewer__container--feature" src={project.feature} />
+            <ProjectCarousel project={project}></ProjectCarousel>
             <div className="viewer__container--content">
               <div className="row">
                 <h1 className={`viewer__title columns small-12 medium-${project.source ? "9" : "12"}`} style={colorHighlight}> {project.name} </h1>

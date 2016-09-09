@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import MediaQuery from 'react-responsive'
 import Select from 'react-select'
 import Radium from 'radium'
@@ -7,6 +8,10 @@ import color from 'color'
 
 @Radium
 export default class ProjectSelector extends Component {
+  static contextTypes = {
+    router: React.PropTypes.object.isRequired
+  }
+
   static propTypes = {
     projects: React.PropTypes.array.isRequired,
     onProjectChange: React.PropTypes.func.isRequired,
@@ -40,7 +45,7 @@ export default class ProjectSelector extends Component {
     };
     return (
       <li className="projects__project" key={index} style={highlightStyle}>
-        <a onClick={() => this.changeProject(index)}>
+        <a onClick={() => this.context.router.replace("/" + project.anchor)}>
           <div className="media-object projects__project--media">
             <div className="media-object-section">
               <img className="projects_project--image thumbnail" src={project.thumbnail} height="90" width="90" /> 
@@ -69,8 +74,8 @@ export default class ProjectSelector extends Component {
   render() {
     var self = this;
     var mobileOptions = [];
-    this.props.projects.map(function(project, i) {
-      this.push({value: i, label: project.name, image: project.thumbnail});
+    this.props.projects.map(function(project) {
+      this.push({value: project.anchor, label: project.name, image: project.thumbnail});
     }, mobileOptions);
 
     return (
@@ -86,7 +91,7 @@ export default class ProjectSelector extends Component {
           <Select 
             className="projects__mobile-project"
             options={mobileOptions}
-            onChange={(val) => this.changeProject(val.value)} 
+            onChange={(val) => this.context.router.replace("/" + val.value)} 
             searchable={false} 
             clearable={false} 
             value={this.state.lastIndex}

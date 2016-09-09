@@ -20,6 +20,16 @@ export default class App extends Component {
       'current': 0,
     };
     this.changeCurrent = this.changeCurrent.bind(this);
+
+    //If we're redirected to a project
+    if(props.params.project) {
+      projects.forEach(function(project, i) {
+        if(project.anchor === props.params.project) {
+          this.state.current = i;
+          return;
+        }
+      }, this);
+    }
   }
 
   componentDidMount() {
@@ -33,11 +43,21 @@ export default class App extends Component {
     }).play();
   }
 
-  //Changes the current project to index new
-  changeCurrent(newIndex) {
-    if(newIndex < this.state.projects.length) {
-      this.setState({'current': newIndex});
+  //When the props or states update
+  componentDidUpdate(prevProps) {
+    if(this.props.params.project && this.props.params.project != prevProps.params.project) {
+      this.changeCurrent(this.props.params.project);
     }
+  }
+
+  //Changes the current project to index new
+  changeCurrent(targetAnchor) {
+    projects.forEach(function(project, i) {
+      if(project.anchor === targetAnchor) {
+        this.setState({'current': i});
+        return;
+      }
+    }, this);
   }
 
   // Preloads all of the images to reduce jumpiness

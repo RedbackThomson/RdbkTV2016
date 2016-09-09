@@ -7,8 +7,8 @@ import Footer from './Footer.js'
 import ProjectSelector from './ProjectSelector.js'
 import ProjectViewer from './ProjectViewer.js'
 
-var projects = require('json!./Projects.json');
-var contact = require('json!./Contact.json');
+var projects = require('./Projects.json');
+var contact = require('./Contact.json');
 
 export default class App extends Component {
   constructor(props) {

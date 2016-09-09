@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionReplace from 'react-css-transition-replace'
+
+import ReactMarkdown from 'react-markdown'
 import MediaQuery from 'react-responsive'
 import Radium from 'radium'
 import color from 'color'
@@ -76,7 +78,7 @@ export default class ProjectViewer extends Component {
                   </a>
                 </span>
               </div>
-              <p className="viewer__body"> {project.body} </p>
+              <ReactMarkdown className="viewer__body" escapeHtml={true} source={project.body}></ReactMarkdown>
             </div>
           </div>
         </ReactCSSTransitionReplace>

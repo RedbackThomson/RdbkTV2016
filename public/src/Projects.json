@@ -16,7 +16,7 @@
     "languages": [
       "Node", "MongoDB", "Heroku"
     ],
-    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    "body": "SD Hacks was a stunning website designed and created for the 2016 hackathon hosted at the University of California, San Diego. As this website was targeting techies, it needed to fit all devices and browsers without compromising on design and functionality. SD Hacks incorporated a built in application system, with an accompanying administration panel and user pages. It also had a section for sponsors to filter and download participants’ resumes. All of this was built on top of a MEAN stack, utilising Heroku for the hosting."
   },
   {
     "name": "Market Monitor",
@@ -32,11 +32,11 @@
     "languages": [
       "Javascript", "Ionic"
     ],
-    "body": ""
+    "body": "Market Monitor was a highly functional, yet simple, hybrid application commissioned by a New York listed stock broking technology company. The company already had a desktop-based solution for determining when markets were opening, closing, at lunch or on holiday. However, this in-house system was too basic for their needs, and was no longer supported. Market Monitor was a more developed, customised version of their product for their mobile devices. It was built in Javascript on top of the Ionic libraries."
   },
   {
     "name": "osu!Celebrity",
-    "subtitle": "500+ daily users",
+    "subtitle": "500+ daily viewers",
     "start_date": "August, 2015",
     "end_date": "March, 2016",
     "source": "https://github.com/OsuCelebrity/OsuCelebrity",
@@ -49,7 +49,7 @@
     "languages": [
       "Java", "Javascript"
     ],
-    "body": ""
+    "body": "osu!Celebrity was an experiment that turned out to be wildly successful. I initially contacted a designer to help me create a proof-of-concept [Twitch](https://twitch.tv) stream for an online game called [osu!](https://osu.ppy.sh). This stream allowed players to queue up for their 30 seconds of fame, in which they would be able to play osu! in front of thousands of viewers. In this time, viewers could vote on whether they wanted to see more of this player, or move on to the next one. In just a few weeks we grew to 500+ daily viewers, peaking over 2,000 viewers on some days. The back-end system was built in Java, but utilises a Javascript and HTML front-end to overlay the game client."
   },
   {
     "name": "LoLAlerter",
@@ -66,7 +66,7 @@
     "languages": [
       "PHP", "Python"
     ],
-    "body": ""
+    "body": "LoLAlerter was a project built out of necessity by the community. The program took only 3 simple steps to configure, making it easily accessible to the League of Legends streamers. LoLAlerter would alert the [Twitch](https://twitch.tv) streamer when they got a new subscriber or donation, by sending them a message in-game. This would allow them to keep their eyes on the game, yet still acknowledge and thank their generous viewers. The servers were built using Python, and the website was built in PHP on top of Laravel."
   },
   {
     "name": "LoLShadow",
@@ -83,13 +83,13 @@
     "languages": [
       "PHP", "Python"
     ],
-    "body": ""
+    "body": "LoLShadow was the successor of [LoLAlerter](#LoLAlerter). After the wild success of the program from the League of Legend  streaming community, others were asking for a more general version. Since LoLAlerter was only for those partnered with [Twitch](https://twitch.tv), others who had not yet been partnered wanted an alternative that would do the same thing except, instead of notifying subscribers and donators, would notify followers. Due to being super simple to set up, and free to use, this too became heavily trafficked. Ultimately, LoLShadow was being run across 3 Python servers with a web interface built in PHP on top of Laravel."
   },
   {
     "name": "osu!Track",
     "subtitle": "Tracked over 200,000 users",
     "start_date": "June, 2014",
-    "end_date": "January, 2015",
+    "end_date": "January, 2016",
     "thumbnail": "img/projects/osutrack/logo.png",
     "url": "https://ameobea.me/osutrack/",
     "images": [
@@ -100,10 +100,10 @@
     "languages": [
       "PHP", "Bootstrap"
     ],
-    "body": ""
+    "body": "osu!Track was a small side-project that I intended on using to better my understanding of web design and back-end development. The idea of osu!Track was to allow players of the game [osu!](https://osu.ppy.sh) to track their progress over a number of months or even years. It would periodically take a snapchat of your current statistics, and allow you to browse the growth of these statistics in the form of graphs and tables on the website. The website base was built in PHP, with the servers that grabbed the data from the game client built with Python."
   },
   {
-    "name": "Mylixia",
+    "name": "MCast",
     "subtitle": "Community homepage",
     "start_date": "September, 2013",
     "end_date": "October, 2013",
@@ -113,8 +113,8 @@
     ],
     "colour": "#6386C2",
     "languages": [
-      "Node", "MongoDB", "Heroku"
+      "PHP", "CakePHP"
     ],
-    "body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    "body": "MCast was the homepage of the legendary League of Legends streamer and player, Mylixia. It served not only as a portal for all of his fans, but also as a social media hub, a blog and a forum. My role was not to design the website, but to implement its back end, and front-end interactivity. All of the social media sections would update live, and the schedule, blog, poll and FAQ could all be updated by Mylixia from the administration panel. The website was built entirely in PHP on top of CakePHP, with jQuery used for front-end interactivity."
   }
 ]

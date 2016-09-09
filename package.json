@@ -7,7 +7,7 @@
     "url": "git+https://RedbackThomson@github.com/RedbackThomson/RdbkTV2016.git"
   },
   "scripts": {
-    "postinstall": "webpack --config ./webpack.prod.config.js --progress --colors",
+    "postinstall": "bower install && webpack --config ./webpack.prod.config.js --progress --colors",
     "start": "node server.js",
     "prod": "node server.prod.js",
     "lint": "eslint src",

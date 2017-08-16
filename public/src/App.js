@@ -39,7 +39,7 @@ export default class App extends Component {
       duration: 100,
       file: 'img/rblogo-outline.svg'
     }, function(obj) {
-      obj.parentEl.classList.add('hero__logo--finished');
+      obj.el.classList.add('hero__logo--finished');
     }).play();
   }
 

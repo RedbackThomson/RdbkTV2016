@@ -1,12 +1,5 @@
 [
   {
-    "name": "skype",
-    "colour": "#28abe3",
-    "hover": "Call me",
-    "icon": "socicon-skype",
-    "link": "skype:Redback93Public"
-  },
-  {
     "name": "twitter",
     "colour": "#4da7de",
     "hover": "Tweet at me",
@@ -26,12 +19,5 @@
     "hover": "Email me",
     "icon": "socicon-mail",
     "link": "mailto:redbackthomson@gmail.com"
-  },
-  {
-    "name": "reddit",
-    "colour": "#e74a1e",
-    "hover": "DM me",
-    "icon": "socicon-reddit",
-    "link": "https://reddit.com/u/Redback93"
   }
 ]

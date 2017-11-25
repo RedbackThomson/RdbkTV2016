@@ -1,5 +1,28 @@
 [
   {
+    "name": "SD Hacks 2017",
+    "subtitle": "Complete Redesign",
+    "url": "https://www.sdhacks.io/",
+    "start_date": "April, 2017",
+    "end_date": "October, 2017",
+    "source": "https://github.com/SDHacks/SDHacks2017",
+    "thumbnail": "img/projects/sdhacks2017/logo.png",
+    "images": [
+      "img/projects/sdhacks2017/feature.jpg",
+      "img/projects/sdhacks2017/home.jpg",
+      "img/projects/sdhacks2017/profile.jpg",
+      "img/projects/sdhacks2017/live.jpg",
+      "img/projects/sdhacks2017/admin.jpg",
+      "img/projects/sdhacks2017/resume.jpg"
+    ],
+    "colour": "#63cbe2",
+    "languages": [
+      "React", "Redux", "MongoDB"
+    ],
+    "body": "SDHacks 2017 was a complete redesign and redevelopment of the 2016 SDHacks website, for UC San Diego’s annual hackathon. This redesign included developing the entire website on a React base, connecting to our MongoDB database through the Express server. The project included a working application and profile feature set for users, an administration back-end for organisers and a resume portal for corporate sponsors. Web Design was done by Vincent Liaw, and all development done by myself.",
+    "anchor": "sdhacks2017"
+  },
+  {
     "name": "D-Loc",
     "subtitle": "Distributed file system",
     "url": "https://devpost.com/software/d-loc",
@@ -20,9 +43,9 @@
     "anchor": "dloc"
   },
   {
-    "name": "SD Hacks",
+    "name": "SD Hacks 2016",
     "subtitle": "More than 3,000 registrations",
-    "url": "https://www.sdhacks.io/",
+    "url": "http://2016.sdhacks.io/",
     "start_date": "June, 2016",
     "end_date": "September, 2016",
     "source": "https://github.com/SDHacks/SDHacks2016",
